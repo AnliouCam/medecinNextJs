@@ -5,6 +5,7 @@ import { siteData } from "@/data/siteData";
 import { DEFAULT_SEO } from "@/lib/constants";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,6 +55,7 @@ export default function RootLayout({
         <Navbar />
         <main id="main-content" className="min-h-screen">{children}</main>
         <Footer />
+        <SpeedInsights/>
       </body>
     </html>
   );
